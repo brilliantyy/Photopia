@@ -7,6 +7,8 @@ html
     body
         div.mainContainer
             div.inspiredContentContainer
+                div.backgroundImageContainer
+                    img(src='/images/bg_fashion-d2b5ea6e.jpg')
                 div.inspiredLogo
                 div.inspiredRegistrationDialog
                     div.title She used Photopia to step up her style
@@ -15,8 +17,11 @@ html
                         div.signUpForm
                             div.buttonWrapper
                                 ul
-                                    li.email
-                                    li.password
-                                    li.signUpButton
+                                    li
+                                        input.email(type='email', id='userEmail', placeholder='Email', autofocus)
+                                    li
+                                        input.password(type='password', id='userPassword', placeholder='Create a password')
+                                    li
+                                        button.Button.signUpButton Sign up
                             div.termOfServiceWrapper
-                button.loginButton
+                button.loginButton Log in
