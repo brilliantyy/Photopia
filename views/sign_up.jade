@@ -3,7 +3,7 @@ html
     head
         meta(charset='UTF-8')
         title Photopia
-        link(rel='stylesheet', href='/stylesheets/index.css')
+        link(rel='stylesheet', href='/stylesheets/sign-up.css')
     body
         div.mainContainer
             div.inspiredContentContainer
@@ -14,14 +14,17 @@ html
                     div.title She used Photopia to step up her style
                     div.subtitle Join Photopia to discover and save creative ideas.
                     div.inspiredRegistrationContainer
-                        div.signUpForm
+                        form.signUpForm(method='POST', action='/')
                             div.buttonWrapper
                                 ul
                                     li
-                                        input.email(type='email', id='userEmail', placeholder='Email', autofocus)
+                                        input.email(type='email', id='userEmail', name='username', placeholder='Email', autofocus)
                                     li
-                                        input.password(type='password', id='userPassword', placeholder='Create a password')
+                                        input.password(type='password', id='userPassword', name='password', placeholder='Create a password')
                                     li
-                                        button.Button.signUpButton Sign up
+                                        button.Button.signUpButton(type='submit', id='submit') Sign up
                             div.termOfServiceWrapper
-                button.loginButton Log in
+                button.loginButton(id='login') Log in
+
+        script(src='/javascripts/utils.js')
+        script(src='/javascripts/sign-up.js')
