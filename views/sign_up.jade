@@ -3,28 +3,28 @@ html
     head
         meta(charset='UTF-8')
         title Photopia
-        link(rel='stylesheet', href='/stylesheets/sign-up.css')
+        link(rel='stylesheet', href='/stylesheets/register_login.css')
     body
-        div.mainContainer
-            div.inspiredContentContainer
-                div.backgroundImageContainer
+        div.main-container
+            div.inspired-content-container
+                div.background-image-container
                     img(src='/images/bg_fashion-d2b5ea6e.jpg')
-                div.inspiredLogo
-                div.inspiredRegistrationDialog
+                div.inspired-logo
+                div.inspired-registration-dialog
                     div.title She used Photopia to step up her style
                     div.subtitle Join Photopia to discover and save creative ideas.
-                    div.inspiredRegistrationContainer
-                        form.signUpForm(method='POST', action='/')
-                            div.buttonWrapper
+                    div.inspired-registration-container
+                        form.signup-form(method='POST', action='/')
+                            div.button-wrapper
                                 ul
                                     li
                                         input.email(type='email', id='userEmail', name='username', placeholder='Email', autofocus)
                                     li
                                         input.password(type='password', id='userPassword', name='password', placeholder='Create a password')
                                     li
-                                        button.Button.signUpButton(type='submit', id='submit') Sign up
+                                        button.Button.primary.signup-button(type='submit', id='submit') Sign up
                             div.termOfServiceWrapper
-                button.loginButton(id='login') Log in
+                button.login-button(id='login') Log in
 
         script(src='/javascripts/utils.js')
-        script(src='/javascripts/sign-up.js')
+        script(src='/javascripts/register.js')

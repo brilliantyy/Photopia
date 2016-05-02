@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        title Photopia
+        link(rel='stylesheet', href='/stylesheets/register_login.css')
+    body
+        div.login-container
+            form.login-form
+                h1 Log in to Photopia
+                div.social-login
+                ul.user-login
+                    li.login-username
+                        input(type='email', id='username', name='username', placeholder='Email')
+                        span
+                    li.login-password
+                        input(type='password', id='password', name='userpassword', placeholder='Password')
+                        span
+                div.login-form-footer
+                    div.login-form-button
+                        button.Button.primary(type='submit', id='login-button') Log in
+                    ul
+                        li
+                            a(href='#') Forgot your password?
+                        li
+                            a(href='/') Sign up now
+
+        script(src='/javascripts/utils.js')
+        script(src='/javascripts/login.js')

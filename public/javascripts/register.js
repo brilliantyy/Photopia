@@ -1,9 +1,11 @@
 var emailTag = document.querySelector('#userEmail'),
     pswTag = document.querySelector('#userPassword'),
     subBtn = document.querySelector('#submit'),
-    logBtn = document.querySelector('#login');
+    goToLogin = document.querySelector('#login');
 
-var validateEmail = function (email) {
+/*************** Registration Page ****************/
+
+var validateEmail = function(email) {
     var regExp = /\S+@\S+\.\S+/;
     if (email.length > 0) {
         return regExp.test(email);
@@ -11,7 +13,7 @@ var validateEmail = function (email) {
     return false;
 };
 
-var validatePassword = function (password) {
+var validatePassword = function(password) {
     var regExp = /(?=.*\d)(?=.*[a-zA-Z]).{6,}/;
     if (password.length > 0) {
         return regExp.test(password);
@@ -19,11 +21,11 @@ var validatePassword = function (password) {
     return false;
 };
 
-var checkForm = function () {
+var checkForm = function() {
     return (validateEmail() && validatePassword()) ? true : false;
 };
 
-var keyUp = function (element) {
+var registerKeyUp = function(element) {
     var content = element.value.trim();
 
     if (element === emailTag) {
@@ -41,14 +43,18 @@ var keyUp = function (element) {
     }
 };
 
-addHandler(emailTag, 'keyup', function () {
-    keyUp(emailTag);
+addHandler(emailTag, 'keyup', function() {
+    registerKeyUp(emailTag);
 });
-addHandler(pswTag, 'keyup', function () {
-    keyUp(pswTag)
+addHandler(pswTag, 'keyup', function() {
+    registerKeyUp(pswTag)
 });
 addHandler(subBtn, 'click', function() {
     return checkForm();
 });
+addHandler(goToLogin, 'click', function() {
+    window.location = '/login';
+});
+
 
 
