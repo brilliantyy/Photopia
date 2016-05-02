@@ -275,6 +275,15 @@ ul.user-login > li > span {
     border-radius: 3px;
     font-size: 16px;
 }
+#login-button:disabled {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: 0 0 0 !important;
+    background: #ebebeb !important;
+    border: 1px solid #ddd !important;
+    color: #aaa !important;
+    cursor: default;
+}
 ul.user-login > li > input.notValid {
     background: #fff;
     border-color: #bd081c;

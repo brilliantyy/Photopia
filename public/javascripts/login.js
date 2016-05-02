@@ -16,20 +16,26 @@ var loginKeyUp = function(element) {
     var content = element.value.trim();
 
     if (element === loginUserName) {
-        if (!validateEmail(content) && !element.classList.contains('notValid')) {
+        if (!validateEmail(content)) {
             element.nextElementSibling.innerHTML = 'Not a valid email.';
-            element.classList.add('notValid');
+            if (!element.classList.contains('notValid')) {
+                element.classList.add('notValid');
+            }
+            logBtn.disabled = true;
         } else if (validateEmail(content)) {
             element.classList.remove('notValid');
             element.nextElementSibling.innerHTML = '';
+            logBtn.disabled = false;
         }
     } else if (element === loginUserPwd) {
         if (content.length === 0) {
             element.classList.add('notValid');
             element.nextElementSibling.innerHTML = 'Required';
+            logBtn.disabled = true;
         } else if (content.length > 0) {
             element.classList.remove('notValid');
             element.nextElementSibling.innerHTML = '';
+            logBtn.disabled = false;
         }
     }
 };
@@ -39,12 +45,7 @@ var inputOnBlur = function(element) {
     if (content.length === 0) {
         element.nextElementSibling.innerHTML = 'Required';
         element.classList.add('notValid');
-    } else {
-        if (element === loginUserName) {
-            if (!validateEmail(content)) {
-                element.nextElementSibling.innerHTML = 'Not a valid email.';
-            }
-        }
+        logBtn.disabled = true;
     }
 
 };
