@@ -12,7 +12,7 @@ router.route('/register')
             if (err) {
                 return console.error(err);
             } else {
-                res.render('index', {username: req.body.username})
+                res.render('home', {username: req.body.username});
             }
         });
     });

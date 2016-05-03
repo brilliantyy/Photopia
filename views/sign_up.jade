@@ -14,7 +14,7 @@ html
                     div.title She used Photopia to step up her style
                     div.subtitle Join Photopia to discover and save creative ideas.
                     div.inspired-registration-container
-                        form.signup-form(method='POST', action='/users/register')
+                        form.signup-form(method='POST', action='/register')
                             div.button-wrapper
                                 ul
                                     li
@@ -25,6 +25,7 @@ html
                                         button.Button.primary.signup-button(type='submit', id='submit') Sign up
                             div.termOfServiceWrapper
                 button.login-button(id='login') Log in
+            div.background
 
         script(src='/javascripts/utils.js')
         script(src='/javascripts/register.js')
