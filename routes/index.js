@@ -5,8 +5,8 @@ var express = require('express'),
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-        res.render('sign_up');
-    });
+    res.render('sign_up');
+});
 
 router.get('/login', function(req, res, next) {
     res.render('login');

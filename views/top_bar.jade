@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        link(rel='stylesheet', href='/stylesheets/top_bar.css')
+    body
+        div.header
+            div.header-container.centered-within-wrapper
+                div.right-header-content
+                   div.right-header
+                       div.notification-conversations-button
+                       button.user-navigate-button
+                           .username-link
+                               .profile-image
+                                   .profile-image-wrapper
+                                       img(src='https://s-passets-cache-ak0.pinimg.com/images/user/default_30.png')
+                               span.profile-name XX
+                div.left-header-content
+                    a.logo-header(href='/')
+                    a.category-header(href='#')
+                    .search-form
+                        form(action='/search/', method='GET', name='search')
+                            .search-input-wrapper
+                                .search-input
+
+
